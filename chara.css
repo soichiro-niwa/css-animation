@@ -1,0 +1,97 @@
+.chara-body{
+  position: absolute;
+  bottom: 0;
+  left: calc(50% - 200px);
+  width: 430px;
+  height: 450px;
+  background-color: #00CA00;
+  border-radius: 55% 55% 40% 40% / 55% 55% 40% 40%;
+  border: solid 2px #333;
+}
+
+.chara-face{
+  position: relative;
+  top: 58px;
+  left: 58px;
+  background-color: #eceed5;
+  width: 65%;
+  height: 52%;
+  border-radius: 55% 55% 40% 40% / 55% 55% 40% 40%;
+}
+
+.eye{
+  position: absolute;
+  top: 50px;
+  left: 60px;
+  background-color: #333;
+  width: 30px;
+  height: 34px;
+  border-radius: 100% / 100%;
+}
+.eye.right{
+  left: auto;
+  right: 90px;
+}
+
+.nose{
+  position: absolute;
+  top: 100px;
+  left: 123px;
+  background-color: #333;
+  width: 5px;
+  height: 6px;
+  border-radius: 100% / 100%;
+}
+.nose.right{
+  left: auto;
+  right: 168px;
+}
+
+.mouth{
+  position: absolute;
+  bottom: 78px;
+  left: 95px;
+  width: 14%;
+  height: 6%;
+  border-bottom: 4px solid #333;
+  border-right: 4px solid #333;
+  border-left: 4px solid #333;
+  border-radius: 0 0 83px 83px;
+}
+
+.whiskers{
+  position: absolute;
+  left: -10px;
+  top: 50%;
+  width: 30px;
+  height: 3px;
+  background-color: #333;
+}
+.whiskers::before{
+  position: absolute;
+  content: "";
+  bottom: 15px;
+  width: 30px;
+  height: 3px;
+  background-color: #333;
+  transform: rotate(25deg)
+}
+.whiskers::after{
+  position: absolute;
+  content: "";
+  bottom: -15px;
+  width: 30px;
+  height: 3px;
+  background-color: #333;
+  transform: rotate(-25deg)
+}
+.whiskers.right{
+  left: auto;
+  right: -10px;
+}
+.whiskers.right::before{
+  transform: rotate(-25deg)
+}
+.whiskers.right::after{
+  transform: rotate(25deg)
+}
