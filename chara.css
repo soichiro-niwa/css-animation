@@ -35,7 +35,7 @@
 
 .nose{
   position: absolute;
-  top: 100px;
+  top: 105px;
   left: 123px;
   background-color: #333;
   width: 5px;
@@ -49,14 +49,14 @@
 
 .mouth{
   position: absolute;
-  bottom: 78px;
-  left: 95px;
-  width: 14%;
+  bottom: 90px;
+  left: 83px;
+  width: 29%;
   height: 6%;
-  border-bottom: 4px solid #333;
-  border-right: 4px solid #333;
-  border-left: 4px solid #333;
-  border-radius: 0 0 83px 83px;
+  border-radius: 0 0 82px 82px / 0 0 33px 33px;
+  border-right: 3px solid #000;
+  border-bottom: 3px solid #000;
+  border-left: 3px solid #000;
 }
 
 .whiskers{
@@ -66,6 +66,8 @@
   width: 30px;
   height: 3px;
   background-color: #333;
+  transform: rotate(-5deg);
+  border-radius: 82px 82px 0 0 / 33px 33px 0 0;
 }
 .whiskers::before{
   position: absolute;
@@ -74,7 +76,8 @@
   width: 30px;
   height: 3px;
   background-color: #333;
-  transform: rotate(25deg)
+  transform: rotate(0deg);
+  border-radius: 82px 82px 0 0 / 33px 33px 0 0;
 }
 .whiskers::after{
   position: absolute;
@@ -83,15 +86,116 @@
   width: 30px;
   height: 3px;
   background-color: #333;
-  transform: rotate(-25deg)
+  transform: rotate(-25deg);
+  border-radius: 82px 82px 0 0 / 33px 33px 0 0;
 }
 .whiskers.right{
   left: auto;
   right: -10px;
+  transform: rotate(-5deg);
 }
 .whiskers.right::before{
-  transform: rotate(-25deg)
+  transform: rotate(0deg)
 }
 .whiskers.right::after{
   transform: rotate(25deg)
+}
+
+/********** 左耳 *************/
+.ear-left-wrap{
+  position: relative;
+  top: calc(-50% + 2px);
+  left: calc(-50% + 52px);
+}
+
+/********** 左耳（緑） *************/
+.ear-left-outer, .ear-left-outer:before, .ear-left-outer:after { 
+  width: 100px;
+  height: 100px;
+}
+.ear-left-outer {
+  overflow: hidden;
+  background-color: transparent;
+  position: relative;
+  margin: 0 auto;
+  border-radius: 20%;
+  transform: translateY(50%) rotate(0deg) skewY(30deg) scaleX(.866);
+  z-index: -1;
+  top: 5px;
+} 
+.ear-left-outer:before, .ear-left-outer:after {
+  position: absolute;
+  content: '';
+}
+.ear-left-outer:before {
+  background-color: #00CA00;
+  border-radius: 20% 20% 20% 53%;
+  transform: scaleX(1.155) skewY(-30deg) rotate(-30deg) translateY(-42.3%) skewX(30deg) scaleY(.866) translateX(-24%);
+}
+.ear-left-outer:after {
+  background-color: #00CA00;
+  border-radius: 20% 20% 53% 20%;
+  transform: scaleX(1.155) skewY(-30deg) rotate(-30deg) translateY(-42.3%) skewX(-30deg) scaleY(.866) translateX(24%);
+}
+
+/********** 左耳（黄） *************/
+.ear-left-inner, .ear-left-inner:before, .ear-left-inner:after { 
+  width: 60px;
+  height: 60px;
+}
+.ear-left-inner {
+  overflow: hidden;
+  background-color: transparent;
+  position: relative;
+  margin: 0 auto;
+  border-radius: 20%;
+  transform: translateY(50%) rotate(0deg) skewY(30deg) scaleX(.866);
+  z-index: -1;
+  top: -62px;
+  left: -3px;
+} 
+.ear-left-inner:before, .ear-left-inner:after {
+  position: absolute;
+  content: '';
+}
+.ear-left-inner:before {
+  background-color: #ede121;
+  border-radius: 20% 20% 20% 53%;
+  transform: scaleX(1.155) skewY(-30deg) rotate(-30deg) translateY(-42.3%) skewX(30deg) scaleY(.866) translateX(-24%);
+}
+.ear-left-inner:after {
+  background-color: #ede121;
+  border-radius: 20% 20% 53% 20%;
+  transform: scaleX(1.155) skewY(-30deg) rotate(-30deg) translateY(-42.3%) skewX(-30deg) scaleY(.866) translateX(24%);
+}
+
+/********** 左耳（黒） *************/
+.ear-left-border, .ear-left-border:before, .ear-left-border:after { 
+  width: 106px;
+  height: 118px;
+}
+.ear-left-border {
+  overflow: hidden;
+  background-color: transparent;
+  position: relative;
+  margin: 0 auto;
+  border-radius: 20%;
+  transform: translateY(50%) rotate(0deg) skewY(30deg) scaleX(.866);
+  z-index: -2;
+  top: -166px;
+  left: 0px;
+} 
+.ear-left-border:before, .ear-left-border:after {
+  position: absolute;
+  content: '';
+}
+.ear-left-border:before {
+  background-color: #333;
+  border-radius: 20% 20% 20% 53%;
+  transform: scaleX(1.155) skewY(-30deg) rotate(-30deg) translateY(-42.3%) skewX(30deg) scaleY(.866) translateX(-24%);
+}
+.ear-left-border:after {
+  background-color: #333;
+  border-radius: 20% 20% 53% 20%;
+  transform: scaleX(1.155) skewY(-30deg) rotate(-30deg) translateY(-42.3%) skewX(-30deg) scaleY(.866) translateX(24%);
 }
