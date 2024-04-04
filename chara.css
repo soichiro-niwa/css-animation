@@ -39,10 +39,10 @@ body {
 }
 @keyframes cloud {
   from {
-    transform: translateX(0);
+    transform: translateX(-120%);
   }
   to {
-    transform: translateX(-150%);
+    transform: translateX(10%);
   }
 }
 .cloud {
