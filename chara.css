@@ -34,8 +34,7 @@ body {
   left: 0;
   width: 100%;
   height: 50%;
-  animation: cloud linear infinite;
-  animation-duration: 23s;
+  animation: 23s cloud linear infinite;
 }
 @keyframes cloud {
   from {
